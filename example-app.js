@@ -15,7 +15,6 @@ app.use(cookieSession({secret: config.cookieSecret}))
 app.get('/', function (req, res) {
 
     // generate random key and redirect url
-    var path = (config.scriptsPath.replace(/^\/|\/$/g, '').replace(/[^\/]$/g, '/')) + 'auth.php'; // avoids double slashes
     var authUrl = 'https://' + config.scriptsUsername + '.scripts.mit.edu:444' + config.scriptsPath + '/auth.php';
     var key = randomstring.generate(10);
     var linkUrl = authUrl + '?key=' + key;

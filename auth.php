@@ -40,7 +40,7 @@
 <html>
     <head>
         <?php echo $valid ? $success_meta : $error_meta; ?>
-        <title>ProjX Auth</title>
+        <title>MIT Auth</title>
     </head>
     <body>
         <?php echo $valid ? $success_message : $error_message; ?>

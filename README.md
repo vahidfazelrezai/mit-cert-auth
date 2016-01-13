@@ -20,6 +20,10 @@ There are two components: the scripts authentication endpoint (`auth.php`) and a
 
 6. The app also computes the hash of the concatenation of the user's email, random key (reloaded from the session), and the server secret. If the result matches the given token, the user is authenticated.
 
+Note: Step 5 is done using a GET request when it really should be a POST request (although this doesn't make it insecure). The reason for this is that the scripts site is HTTPS and the assumption is that the external app is not, so standard Internet security rules don't allow a POST request.
+
+Another note: Including the email in the hash isn't absolutely necessary for logging in, but would be needed for something like linking an existing account to an MIT certificate. (It also doesn't hurt to include the email in the hash.)
+
 ## Instructions
 
 This assumes you have installed Node.js and npm.
@@ -32,3 +36,4 @@ Finally, start the example app by running `node example-app.js`. You can test it
 
 When actually deploying this, make sure to make the secrets in `config.json` not publicly accessible.
 
+Please let me know if something is wrong in either the theory or the code!

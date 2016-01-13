@@ -1,0 +1,7 @@
+{
+    "loginUrl": "http://localhost:8000/login",
+    "scriptsUsername": "vfazel",
+    "scriptsPath": "/",
+    "authSecret": "randomStringOfChars",
+    "cookieSecret": "anotherRandomString"
+}

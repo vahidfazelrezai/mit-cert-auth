@@ -1,0 +1,25 @@
+{
+  "name": "mit-cert-auth",
+  "version": "1.0.0",
+  "description": "a simple PHP endpoint to authenticate MIT certificates for external servers",
+  "main": "auth.php",
+  "scripts": {
+    "start": "node example-app.js",
+    "deploy": "node deploy-auth.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vfazel/mit-cert-auth.git"
+  },
+  "author": "Vahid Fazel-Rezai",
+  "license": "MIT",
+  "dependencies": {
+    "cookie-session": "^2.0.0-alpha.1",
+    "express": "^4.13.3",
+    "randomstring": "^1.1.3",
+    "sha256": "^0.2.0"
+  },
+  "devDependencies": {
+    "scp": "0.0.3"
+  }
+}
